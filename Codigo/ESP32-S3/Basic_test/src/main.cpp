@@ -50,7 +50,10 @@ void taskSensor(void *pvParameters) {
   for (;;) {
     int sensorValue = analogRead(ADC_PIN);
     Serial.println(sensorValue);   // **only numeric output for MATLAB**
-    vTaskDelay(pdMS_TO_TICKS(1000));  // every 1s
+    //vTaskDelay(pdMS_TO_TICKS(1000));  // every 1s
+    //vTaskDelay(pdMS_TO_TICKS(100));  // every 100 ms (10 Hz)
+    //vTaskDelay(pdMS_TO_TICKS(10));  // every 10 ms (100 Hz)
+    vTaskDelay(pdMS_TO_TICKS(1));  // ~1 ms per sample
   }
 }
 
