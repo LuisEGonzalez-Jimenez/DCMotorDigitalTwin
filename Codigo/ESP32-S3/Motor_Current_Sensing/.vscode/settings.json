@@ -1,0 +1,4 @@
+{
+    "C_Cpp.default.configurationProvider": "platformio",
+    "C_Cpp.errorSquiggles": "Enabled"
+}
