@@ -1,0 +1,85 @@
+Loading data from run_50pct.csv ...
+First few rows of the dataset:
+    t_s    duty_pct    Vbus_V    u_eff_V    current_A    omega_rad_s     RPM  
+    ___    ________    ______    _______    _________    ___________    ______
+
+    0.1       50       11.988     5.988      0.0742        11.234       107.27
+    0.2       50       11.992      5.99      0.0468         14.09       134.55
+    0.3       50       11.984     5.986      0.0558         14.28       136.36
+    0.4       50       11.992      5.99      0.0291         14.47       138.18
+    0.5       50       11.984     5.986      0.0496         14.47       138.18
+    0.6       50       11.992      5.99      0.0281         14.28       136.36
+    0.7       50        11.98     5.984       0.065         14.47       138.18
+    0.8       50       11.992      5.99      0.0334         14.47       138.18
+
+Detected sample time Ts = 0.1000 s
+
+Estimating continuous-time MIMO state-space model...
+=== Identified Continuous-Time Model ===
+
+model_MIMO =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+                         x1                    x2
+   x1   12.25 +/- 3.481e+14  -1.432 +/- 3.381e+15
+   x2  -2.804 +/- 1.713e+15  -15.78 +/- 3.481e+14
+ 
+  B = 
+                    u_eff_V
+   x1   151.3 +/- 6.664e+16
+   x2  -527.9 +/- 7.755e+17
+ 
+  C = 
+                                      x1                        x2
+   omega_rad_s    -0.02943 +/- 2.601e+12  -0.0009786 +/- 4.231e+12
+   current_A       0.00021 +/- 5.158e+10   0.0002415 +/- 3.744e+11
+ 
+  D = 
+                u_eff_V
+   omega_rad_s        0
+   current_A          0
+ 
+  K = 
+                omega_rad_s             current_A
+   x1   409.9 +/- 5.396e+16    1320 +/- 1.137e+17
+   x2  -80.94 +/- 2.048e+17   15.61 +/- 2.504e+17
+ 
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 14
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                      
+Termination condition: Maximum number of iterations reached..
+Number of iterations: 20, Number of function evaluations: 171
+                                                             
+Estimated using SSEST on time domain data "data".            
+Fit to estimation data: [-4282;-2244]% (prediction focus)    
+FPE: 2.82, MSE: 953.1                                        
+More information in model's "Report" property.
+ 
+Model Properties
+
+A = 
+   12.2468   -1.4325
+   -2.8040  -15.7759
+
+B = 
+  151.3312
+ -527.9454
+
+C = 
+   -0.0294   -0.0010
+    0.0002    0.0002
+
+D = 
+     0
+     0
+
+
+Model saved to CDMotor_SS_Model.mat

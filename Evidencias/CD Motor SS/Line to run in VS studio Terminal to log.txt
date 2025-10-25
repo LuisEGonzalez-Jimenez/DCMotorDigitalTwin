@@ -1,0 +1,59 @@
+pio device monitor --baud 115200 | Tee-Object -FilePath run_50pct.csv
+50
+
+no imprime nada como la otra version, pero igual se pueden dar valores 
+de PWM de 0 a 100 despues de la primera linea.
+
+
+PS C:\ESP32_PlatformIO\CDMotor_SS_logger> pio device monitor --baud 115200 | Tee-Object -FilePath run_50pct.csv
+
+Da un log asi
+
+PS C:\ESP32_PlatformIO\CDMotor_SS_logger> pio device monitor --baud 115200 | Tee-Object -FilePath run_50pct.csv
+--- Terminal on COM13 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x0 (DOWNLOAD(USB/UART0))
+waiting for download
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x4bc
+load:0x403c9700,len:0xbd8
+load:0x403cc700,len:0x2a0c
+entry 0x403c98d0
+
+=== TB6612 + INA219 + Encoder CSV Test ===
+Please input PWM step % (0ΓÇô100):
+Starting test with PWM = 50% (duty=511)
+t_s,duty_pct,Vbus_V,u_eff_V,current_A,omega_rad_s,RPM
+0.100,50.0,11.988,5.988,0.074200,11.2336,107.27
+0.200,50.0,11.992,5.990,0.046800,14.0896,134.55
+0.300,50.0,11.984,5.986,0.055800,14.2800,136.36
+0.400,50.0,11.992,5.990,0.029100,14.4704,138.18
+0.500,50.0,11.984,5.986,0.049600,14.4704,138.18
+0.600,50.0,11.992,5.990,0.028100,14.2800,136.36
+0.700,50.0,11.980,5.984,0.065000,14.4704,138.18
+0.800,50.0,11.992,5.990,0.033400,14.4704,138.18
+0.900,50.0,11.984,5.986,0.046400,14.2800,136.36
+1.000,50.0,11.988,5.988,0.042500,14.4704,138.18
+1.100,50.0,11.984,5.986,0.041300,14.4704,138.18
+1.200,50.0,11.992,5.990,0.069800,14.4704,138.18
+1.300,50.0,11.992,5.990,0.027200,14.4704,138.18
+1.400,50.0,11.984,5.986,0.044200,14.4704,138.18
+1.500,50.0,11.992,5.990,0.038500,14.2800,136.36
+1.600,50.0,11.992,5.990,0.039100,14.4704,138.18
+1.700,50.0,11.988,5.988,0.083100,14.4704,138.18
+1.800,50.0,11.992,5.990,0.028600,14.6608,140.00
+1.900,50.0,11.984,5.986,0.037200,14.4704,138.18
+2.000,50.0,11.992,5.990,0.059100,14.4704,138.18
+Test complete.
+
+Please input PWM step % (0ΓÇô100):
+
+mover el run_50pct.csv al folder de matlab donde se ejecuta el .m
