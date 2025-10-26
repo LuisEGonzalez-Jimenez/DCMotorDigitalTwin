@@ -1,4 +1,18 @@
-//Updated code so that we send to MATLAB both the time for each sample, and the sample value
+/******************************************************************
+* Project
+	Hardware in the Loop applied to a DC Motor
+* File
+	ADC TIme Logger
+* Description
+	Read the ADC and log with time stamps
+	Updated code so that we send to MATLAB both the time for each sample, and the sample value
+* Author:
+	Ramos Romero Rodrigo
+* Date:
+	26/10/2025
+*TODO:
+	
+******************************************************************/
 
 #include <Arduino.h>
 

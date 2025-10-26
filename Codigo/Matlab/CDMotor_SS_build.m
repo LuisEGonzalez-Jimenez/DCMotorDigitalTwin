@@ -2,11 +2,16 @@
 %  CDMotor_SS_build.m
 %  Build MIMO State-Space model of a DC motor from logged data
 %  --------------------------------------------------------------
+%  Project : Hardware in the Loop Applied to a DC Motor
+%  Author  : Rodrigo Ramos Romero 
+%  Date    : 26/10/2025
+%  --------------------------------------------------------------
 %  Inputs  : u_eff_V (applied motor voltage)
 %  Outputs : omega_rad_s (angular velocity, rad/s)
 %             current_A   (armature current, A)
-%  File    : run_50pct.csv  (or any CSV from the ESP32 logger)
+%  File    : run_50pct.csv  (or any CSV from the ESP32_S3 SS Build)
 %  ===============================================================
+
 
 clear; clc; close all;
 

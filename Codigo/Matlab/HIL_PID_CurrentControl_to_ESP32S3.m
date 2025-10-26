@@ -1,6 +1,14 @@
-%% HIL PID Current Controller (MATLAB side)
-% MATLAB controls armature current (i_ref)
-% ESP32-S3 emulates DC motor plant (binary protocol)
+%% ===============================================================
+%  HIL_PID_Controller_to_ESP32S3.m
+%  HIL PID Current Controller (MATLAB side)
+%  MATLAB controls armature current (i_ref)
+%  ESP32-S3 emulates DC motor plant (binary protocol)
+%  --------------------------------------------------------------
+%  Project : Hardware in the Loop Applied to a DC Motor
+%  Author  : Rodrigo Ramos Romero 
+%  Date    : 26/10/2025
+%  ===============================================================
+
 
 function HIL_PID_CurrentControl_to_ESP32S3()
     % === Serial setup ===

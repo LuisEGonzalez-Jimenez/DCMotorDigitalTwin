@@ -1,3 +1,22 @@
+/******************************************************************
+* Project
+	Hardware in the Loop applied to a DC Motor
+* File
+	CD Motor Current sensing
+* Description
+	Using the ESP32-S3, TB6612 motor bridge and INA219 DC current
+	sensor, print the armature current on the motor while running
+	a PWM step test
+* Author:
+	Ramos Romero Rodrigo
+* Date:
+	26/10/2025
+*TODO:
+	
+******************************************************************/
+
+
+
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_INA219.h>
@@ -51,6 +70,8 @@ void logElectrical(int duty) {
 } */
 
 void setup() {
+  //pinMode(LED_BUILTIN, OUTPUT);
+  //digitalWrite(LED_BUILTIN, HIGH);  // turn on LED immediately
   Serial.println("\n\n=== TB6612 + INA219 bring-up ===");
   Serial.begin(115200);
   delay(50);

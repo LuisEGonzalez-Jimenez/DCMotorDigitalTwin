@@ -1,5 +1,18 @@
-/** Arduino Sketch for the ESP32-S3 that simulates a CD motor
- * as "Plant" Controlled by a Matlab / Octave PID **/
+/******************************************************************
+* Project
+	Hardware in the Loop applied to a DC Motor
+* File
+	CD Motor Plant 
+* Description
+	Arduino Sketch for the ESP32-S3 that simulates a DC motor
+    as "Plant" Controlled by a Matlab / Octave PID 
+* Author:
+	Ramos Romero Rodrigo
+* Date:
+	26/10/2025
+*TODO:
+	
+******************************************************************/
 
 #include <Arduino.h>
 

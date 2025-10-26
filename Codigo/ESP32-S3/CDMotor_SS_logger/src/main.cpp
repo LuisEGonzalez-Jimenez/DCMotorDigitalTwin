@@ -1,3 +1,21 @@
+/******************************************************************
+* Project
+	Hardware in the Loop applied to a DC Motor
+* File
+	CD Motor State Space Logger
+* Description
+	Logs values captured using the ESP32-S3, TB6612 motor bridge and 
+	INA219 DC sensor for matlab processing using PWM input from
+	0-100%. Updated version from "full logger" that saves RPM,
+	Current and Angular velocity
+* Author:
+	Ramos Romero Rodrigo
+* Date:
+	26/10/2025
+*TODO:
+	
+******************************************************************/
+
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_INA219.h>

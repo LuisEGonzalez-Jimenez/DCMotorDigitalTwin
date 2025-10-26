@@ -1,3 +1,19 @@
+/******************************************************************
+* Project
+	Hardware in the Loop applied to a DC Motor
+* File
+	PID Controller
+* Description
+	Simulates a PID Controller with connection a Matlab CD Motor Plant
+* Author:
+	Ramos Romero Rodrigo
+* Date:
+	26/10/2025
+*TODO:
+	
+******************************************************************/
+
+
 #include <Arduino.h>
 #include <math.h>  // isnan, isinf, isfinite
 
