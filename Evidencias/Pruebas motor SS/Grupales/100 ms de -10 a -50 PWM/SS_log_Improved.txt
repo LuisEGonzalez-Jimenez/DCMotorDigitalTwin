@@ -1,0 +1,70 @@
+=== CDMotor Robust SS Identification Log ===
+Generated on: 29-Oct-2025 19:02:48
+
+Average Ts: 0.100000 s
+
+--- A Matrix ---
+  -11.588258    -1.420098
+   57.877864   -14.254111
+
+--- B Matrix ---
+    0.791335
+   23.795354
+
+--- C Matrix ---
+    4.037989    -1.214997
+    0.067200     0.010624
+
+--- D Matrix ---
+    0.000000
+    0.000000
+
+
+model_MIMO =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+                         x1                    x2
+   x1  -11.59 +/- 2.887e+05   -1.42 +/- 7.739e+04
+   x2   57.88 +/- 9.602e+06  -14.25 +/- 2.259e+05
+ 
+  B = 
+                    u_eff_V
+   x1  0.7913 +/- 1.896e+05
+   x2    23.8 +/- 1.259e+06
+ 
+  C = 
+                                  x1                    x2
+   omega_rad_s   4.038 +/- 1.215e+05      -1.215 +/-   185
+   current_A    0.0672 +/-      7935     0.01062 +/- 243.7
+ 
+  D = 
+                u_eff_V
+   omega_rad_s        0
+   current_A          0
+ 
+  K = 
+       omega_rad_s    current_A
+   x1            0            0
+   x2            0            0
+ 
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: none
+   Number of free coefficients: 10
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                                                     
+Termination condition: Near (local) minimum, (norm(g) < tol)..                              
+Number of iterations: 13, Number of function evaluations: 44                                
+                                                                                            
+Estimated using SSEST on time domain data "data_all".                                       
+Fit to estimation data: [-24.41 0.6618 5.001 32.67 37.62;-38.06 -13.21 -2.599 3.605 0.1598]%
+FPE: 1.946e-05, MSE: [0.28 0.1678 0.1124 0.05646 0.08726]                                   
+More information in model's "Report" property.
+ 
+<a href="matlab:if exist('model_MIMO','var'), if isa(model_MIMO,'idss'), disp(' '); disp(get(model_MIMO)), else disp(' '); disp('Unable to display properties for variable model_MIMO because it is no longer a/an idss object.');, end, else matlab.graphics.internal.getForDisplay('model_MIMO'), end">Model Properties</a>
+

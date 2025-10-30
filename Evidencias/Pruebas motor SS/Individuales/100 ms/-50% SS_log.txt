@@ -1,0 +1,71 @@
+=== CDMotor State-Space Identification Log ===
+Generated on: 29-Oct-2025 18:43:36
+
+Sample time (Ts): 0.100000 s
+
+--- A Matrix ---
+  -26.340827   -15.940090
+   -6.789498    -7.377533
+
+--- B Matrix ---
+   17.037792
+    7.580529
+
+--- C Matrix ---
+   -3.125474    -1.817724
+   -0.059263     0.015029
+
+--- D Matrix ---
+    0.000000
+    0.000000
+
+Model summary:
+
+model_MIMO =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+                         x1                    x2
+   x1  -26.34 +/- 1.564e+14  -15.94 +/- 1.046e+14
+   x2  -6.789 +/- 1.757e+14  -7.378 +/- 1.564e+14
+ 
+  B = 
+                   u_eff_V
+   x1  17.04 +/- 1.865e+14
+   x2  7.581 +/- 1.589e+14
+ 
+  C = 
+                                    x1                      x2
+   omega_rad_s    -3.125 +/- 3.359e+13    -1.818 +/- 2.483e+13
+   current_A    -0.05926 +/- 6.545e+11   0.01503 +/-  3.07e+11
+ 
+  D = 
+                u_eff_V
+   omega_rad_s        0
+   current_A          0
+ 
+  K = 
+                omega_rad_s             current_A
+   x1  0.3131 +/-  4.67e+12  -238.8 +/- 2.578e+15
+   x2  0.5201 +/- 4.899e+12   377.7 +/- 5.549e+15
+ 
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 14
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                      
+Termination condition: Maximum number of iterations reached..
+Number of iterations: 20, Number of function evaluations: 306
+                                                             
+Estimated using SSEST on time domain data "data".            
+Fit to estimation data: [54.42;66.57]% (prediction focus)    
+FPE: 1.13e-06, MSE: 0.0581                                   
+More information in model's "Report" property.
+ 
+<a href="matlab:if exist('model_MIMO','var'), if isa(model_MIMO,'idss'), disp(' '); disp(get(model_MIMO)), else disp(' '); disp('Unable to display properties for variable model_MIMO because it is no longer a/an idss object.');, end, else matlab.graphics.internal.getForDisplay('model_MIMO'), end">Model Properties</a>
+

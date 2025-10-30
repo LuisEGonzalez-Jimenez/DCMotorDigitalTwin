@@ -17,7 +17,7 @@ clear; clc; close all;
 
 %% === 1. Load CSV file ===
 %  Adjust filename as needed (e.g., run_30pct.csv, run_70pct.csv)
-fname = 'run_50pct.csv';
+fname = 'CD_Motor_data.csv';
 fprintf('Loading data from %s ...\n', fname);
 T = readtable(fname);
 
@@ -101,3 +101,32 @@ compare(data, model_MIMO);
 %% === 8. Optional: Export model for reuse ===
 save('CDMotor_SS_Model.mat', 'model_MIMO', 'A', 'B', 'C', 'D', 'Ts');
 fprintf('\nModel saved to CDMotor_SS_Model.mat\n');
+
+%% === 9. Write summary log to text file ===
+logFile = 'SS_log.txt';
+fid = fopen(logFile, 'w');
+
+fprintf(fid, '=== CDMotor State-Space Identification Log ===\n');
+fprintf(fid, 'Generated on: %s\n\n', datestr(now));
+
+fprintf(fid, 'Sample time (Ts): %.6f s\n\n', Ts);
+
+fprintf(fid, '--- A Matrix ---\n');
+fprintf(fid, '%12.6f %12.6f\n', A');
+fprintf(fid, '\n--- B Matrix ---\n');
+fprintf(fid, '%12.6f\n', B);
+fprintf(fid, '\n--- C Matrix ---\n');
+fprintf(fid, '%12.6f %12.6f\n', C');
+fprintf(fid, '\n--- D Matrix ---\n');
+fprintf(fid, '%12.6f\n', D);
+
+fprintf(fid, '\nModel summary:\n');
+try
+    fprintf(fid, '%s\n', evalc('present(model_MIMO)'));
+catch
+    fprintf(fid, '(present() summary unavailable)\n');
+end
+
+fclose(fid);
+fprintf('Text log saved to %s\n', logFile);
+
