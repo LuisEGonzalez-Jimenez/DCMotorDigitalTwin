@@ -1,0 +1,50 @@
+>> ss8
+
+ss8 =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+             x1        x2        x3        x4
+   x1   -0.5103  -0.07992   -0.9039   -0.1103
+   x2    0.6528   -0.6683   -0.3608   0.09091
+   x3    0.2704    0.1538   -0.3007   -0.9759
+   x4    0.2989    0.4266   -0.2527    0.1408
+ 
+  B = 
+           u1
+   x1   7.732
+   x2   10.26
+   x3  -17.45
+   x4  -23.28
+ 
+  C = 
+              x1         x2         x3         x4
+   y1     0.0668    0.09856    -0.1099  -0.009446
+ 
+  D = 
+       u1
+   y1   0
+ 
+  K = 
+           y1
+   x1  0.8263
+   x2  0.5859
+   x3   1.492
+   x4   1.255
+ 
+Name: ss8
+Sample time: 0.01 seconds
+
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 28
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                            
+Estimated using N4SID on time domain data "mydata".
+Fit to estimation data: 80.98% (prediction focus)  
+FPE: 0.0001061, MSE: 9.952e-05      

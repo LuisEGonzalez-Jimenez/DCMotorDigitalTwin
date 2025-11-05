@@ -1,0 +1,50 @@
+>> ss7
+
+ss7 =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+             x1        x2        x3        x4
+   x1   0.08541      0.25    -0.999    0.1227
+   x2   -0.4268    0.1069    0.4691     1.038
+   x3    0.1653    0.5519    0.2523   -0.1571
+   x4  -0.04548   -0.4069    0.5302   -0.3202
+ 
+  B = 
+           u1
+   x1  -48.83
+   x2  -6.812
+   x3  -25.23
+   x4  -21.24
+ 
+  C = 
+           x1      x2      x3      x4
+   y1  -7.297   2.937  -4.085  -1.925
+ 
+  D = 
+       u1
+   y1   0
+ 
+  K = 
+            y1
+   x1  0.04259
+   x2  0.04114
+   x3  0.02504
+   x4  -0.0214
+ 
+Name: ss7
+Sample time: 0.01 seconds
+
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 28
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                            
+Estimated using N4SID on time domain data "mydata".
+Fit to estimation data: 60.56% (prediction focus)  
+FPE: 0.2519, MSE: 0.2363    
