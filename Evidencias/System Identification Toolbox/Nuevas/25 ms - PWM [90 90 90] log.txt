@@ -1,0 +1,52 @@
+>> ss1
+
+ss1 =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+             x1        x2        x3        x4
+   x1    0.9697  -0.09574    0.1276    0.1253
+   x2     0.103    0.2053    0.1026     2.993
+   x3  -0.03191   0.09082    0.9323    0.4129
+   x4   0.01517   -0.1186   -0.2477     1.176
+ 
+  B = 
+             u1
+   x1  -0.04511
+   x2   -0.4239
+   x3  -0.04859
+   x4   0.04191
+ 
+  C = 
+            x1       x2       x3       x4
+   y1   -245.7    7.427   -8.308    2.336
+   y2  -0.8393    1.424  -0.3641  0.07539
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+               y1          y2
+   x1   -0.003949    -0.03833
+   x2  -0.0003717      0.4777
+   x3   -0.004587    -0.01692
+   x4    0.001784     0.07643
+ 
+Name: ss1
+Sample time: 0.025 seconds
+
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 36
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                   
+Estimated using N4SID on time domain data "mydata".       
+Fit to estimation data: [77.14;-7.042]% (prediction focus)
+FPE: 0.1439, MSE: 11.5       

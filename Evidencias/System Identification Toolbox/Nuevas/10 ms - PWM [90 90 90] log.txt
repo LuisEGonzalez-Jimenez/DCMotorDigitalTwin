@@ -1,0 +1,52 @@
+>> ss5
+
+ss5 =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+             x1        x2        x3        x4
+   x1    0.6061   -0.3912   -0.7244   -0.3357
+   x2    0.3831    0.8009  0.007122   -0.3977
+   x3    0.1791   -0.3117    0.6079   -0.2914
+   x4    0.2597   0.03714    0.3535    0.5987
+ 
+  B = 
+            u1
+   x1  -0.5422
+   x2  -0.7587
+   x3  -0.7824
+   x4  -0.3122
+ 
+  C = 
+             x1        x2        x3        x4
+   y1   -0.8957      -229       129     167.7
+   y2  -0.06918    -1.048     1.717  -0.04159
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+              y1         y2
+   x1  0.0007708    0.01808
+   x2  0.0007868    -0.1911
+   x3  -0.001909   -0.05026
+   x4   0.001353   -0.02285
+ 
+Name: ss5
+Sample time: 0.01 seconds
+
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 36
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                                      
+Estimated using N4SID on time domain data "mydata".                          
+Fit to estimation data: [-93.45;-227.5]% (prediction focus, data prefiltered)
+FPE: 26.54, MSE: 816.9  

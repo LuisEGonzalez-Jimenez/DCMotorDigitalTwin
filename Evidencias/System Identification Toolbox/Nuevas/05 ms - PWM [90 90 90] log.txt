@@ -1,0 +1,52 @@
+>> ss6
+
+ss6 =
+  Discrete-time identified state-space model:
+    x(t+Ts) = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+             x1        x2        x3        x4
+   x1    0.8535    0.1274    -2.651   -0.3969
+   x2   0.01083    0.9984  -0.04484   0.01033
+   x3    0.1838   0.02869    0.2779   0.04237
+   x4   0.02298  0.001404   -0.1126    0.9984
+ 
+  B = 
+            u1
+   x1   -2.455
+   x2  0.05335
+   x3   0.9125
+   x4   0.1013
+ 
+  C = 
+            x1       x2       x3       x4
+   y1    -4.21    465.2   -43.13    129.5
+   y2  0.06938    2.831  -0.6355   -2.616
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+              y1         y2
+   x1   0.001049   -0.00205
+   x2  0.0004354    0.01643
+   x3   0.002407      0.129
+   x4   0.001104    0.01017
+ 
+Name: ss6
+Sample time: 0.005 seconds
+
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 36
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                                    
+Estimated using N4SID on time domain data "mydata".                        
+Fit to estimation data: [87.56;7.819]% (prediction focus, data prefiltered)
+FPE: 0.264, MSE: 3.025  
