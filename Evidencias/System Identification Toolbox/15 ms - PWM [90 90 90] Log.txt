@@ -1,0 +1,44 @@
+>> ss4
+
+ss4 =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+           x1      x2
+   x1   -78.2  0.6627
+   x2   117.8  -52.45
+ 
+  B = 
+           u1
+   x1   2.731
+   x2  -4.513
+ 
+  C = 
+            x1       x2
+   y1  -0.0632   -1.814
+   y2    82.87    32.82
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+           y1      y2
+   x1  -1.541  0.8443
+   x2   6.242  0.1268
+ 
+Name: ss4
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 14
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                 
+Estimated using N4SID on time domain data "mydata".     
+Fit to estimation data: [47.59;92.9]% (prediction focus)
+FPE: 0.002174, MSE: 0.9964 

@@ -1,0 +1,44 @@
+>> ss2
+
+ss2 =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+           x1      x2
+   x1  -9.288  -87.83
+   x2   11.47  -74.81
+ 
+  B = 
+           u1
+   x1  -2.228
+   x2  -1.786
+ 
+  C = 
+           x1      x2
+   y1  -3.041  0.1369
+   y2   66.77  -118.8
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+           y1      y2
+   x1  -15.61  -3.535
+   x2   3.275  -4.458
+ 
+Name: ss2
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 14
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                  
+Estimated using N4SID on time domain data "mydata".      
+Fit to estimation data: [62.86;98.05]% (prediction focus)
+FPE: 8.325e-05, MSE: 0.06055       
