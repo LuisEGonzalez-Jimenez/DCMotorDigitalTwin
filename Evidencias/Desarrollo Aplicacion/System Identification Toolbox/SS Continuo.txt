@@ -1,0 +1,50 @@
+>> ss1
+
+ss1 =
+  Continuous-time identified state-space model:
+      dx/dt = A x(t) + B u(t) + K e(t)
+       y(t) = C x(t) + D u(t) + e(t)
+ 
+  A = 
+           x1      x2      x3      x4
+   x1  -15.03  -2.817  -4.933    7.28
+   x2  -49.28   32.86  -53.17  -147.8
+   x3  -19.99   3.406  -25.21  -31.21
+   x4  -140.3   116.1   -80.6  -180.7
+ 
+  B = 
+           u1
+   x1  0.3288
+   x2   4.455
+   x3   1.201
+   x4   9.707
+ 
+  C = 
+            x1       x2       x3       x4
+   y1  -0.3921   -1.129  -0.9483   0.1285
+   y2    93.59    2.584    4.958   -1.154
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+  K = 
+            y1       y2
+   x1    1.208   0.3743
+   x2  -0.2238    9.297
+   x3   -15.86    4.624
+   x4   -1.515    10.81
+ 
+Name: ss1
+Parameterization:
+   FREE form (all coefficients in A, B, C free).
+   Feedthrough: none
+   Disturbance component: estimate
+   Number of free coefficients: 36
+   Use "idssdata", "getpvec", "getcov" for parameters and their uncertainties.
+
+Status:                                                 
+Estimated using N4SID on time domain data "mydata".     
+Fit to estimation data: [46.47;96.3]% (prediction focus)
+FPE: 0.0006345, MSE: 0.2864     
