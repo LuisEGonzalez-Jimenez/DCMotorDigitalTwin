@@ -2,7 +2,7 @@
 * Project:
     Hardware in the Loop applied to a DC Motor
 * File:
-    CDCMotor_Matlab_log (Corrected 3-step sequence version)
+    DCMotor_Matlab_log (Corrected 3-step sequence version)
 * Description:
     Logs values using ESP32-S3, TB6612 driver, INA219 current sensor,
     and quadrature encoder. Designed for MATLAB pipeline:
